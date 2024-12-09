@@ -13,11 +13,11 @@ class PropertyController extends Controller
     public function index()
     {
         return Property::with('images', 'owner')
-    ->where('active', 1)
-    ->get();
+            ->where('active', 1)
+            ->get();
     }
 
-    
+
     public function show($id)
     {
         $property = Property::with('images', 'owner')->find($id);
@@ -29,17 +29,17 @@ class PropertyController extends Controller
         return $property;
     }
 
-    
+
     public function userProperties()
     {
         $user = Auth::user();
         return Property::with('images')->where('owner_id', $user->id)->get();
     }
 
-    
+
     public function store(Request $request)
     {
-         $validation = Validator::make($request->all(), [
+        $validation = Validator::make($request->all(), [
             'name' => 'required|string',
             'gpslocation' => 'required|string',
             'description' => 'nullable|string',
@@ -47,20 +47,20 @@ class PropertyController extends Controller
             'cost' => 'required|numeric',
             'location' => 'required|string',
             // 'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'image'=>'required|string',
+            'image' => 'nullable|string',
             'extra_images' => 'nullable|array',
             'extra_images.*' => 'nullable|url',
         ]);
         if ($validation->fails()) {
-    return response()->json([
-        'success' => false,
-        'errors' => $validation->errors(),
-    ], 422);
-}
+            return response()->json([
+                'success' => false,
+                'errors' => $validation->errors(),
+            ], 422);
+        }
 
         $user = Auth::user();
 
-        
+
         $propertyData = $request->only(['name', 'gpslocation', 'description', 'amenities', 'cost', 'location']);
         $propertyData['owner_id'] = $user->id;
 
@@ -70,7 +70,7 @@ class PropertyController extends Controller
 
         $property = Property::create($propertyData);
 
-        
+
         if ($request->has('extra_images')) {
             foreach ($request->extra_images as $imageLink) {
                 PropertyImage::create([
@@ -81,7 +81,7 @@ class PropertyController extends Controller
         }
         return response()->json($property->load('images'), 201);
     }
-    
+
     public function update(Request $request, $id)
     {
         $property = Property::find($id);
@@ -98,12 +98,12 @@ class PropertyController extends Controller
             'cost' => 'required|numeric',
             'location' => 'required|string',
             // 'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'image'=>'required|string',
+            'image' => 'required|string',
             'extra_images' => 'nullable|array',
             'extra_images.*' => 'nullable|url',
         ]);
 
-        
+
         $property->update($request->only(['name', 'gpslocation', 'description', 'amenities', 'cost', 'location']));
 
         if ($request->hasFile('image')) {
@@ -111,9 +111,9 @@ class PropertyController extends Controller
             $property->save();
         }
 
-        
+
         if ($request->has('extra_images')) {
-            $property->images()->delete(); 
+            $property->images()->delete();
             foreach ($request->extra_images as $imageLink) {
                 PropertyImage::create([
                     'property_id' => $property->id,
@@ -125,7 +125,7 @@ class PropertyController extends Controller
         return response()->json($property->load('images'));
     }
 
-    
+
     public function destroy($id)
     {
         $property = Property::find($id);
