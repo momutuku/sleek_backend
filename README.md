@@ -39,7 +39,7 @@ To set up the Laravel backend:
 
 1. **Clone the repository:**  
    ```bash
-   git clone https://github.com/sleek_backend.git
+   git clone https://github.com/momutuku/sleek_backend.git
    cd sleek
    ```
 
