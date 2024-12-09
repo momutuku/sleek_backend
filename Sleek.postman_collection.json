@@ -1,0 +1,583 @@
+{
+	"info": {
+		"_postman_id": "6a76273e-5ac7-4c43-a9a1-1d81f38ca3a9",
+		"name": "Sleek",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19904898"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\":\"{{$randomFirstName}}\",\r\n    \"last_name\":\"{{$randomLastName}}\",\r\n    \"email\":\"mutuku@email.com\",\r\n    \"password\":\"MutukusVerySecurePassword1234,\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/register",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\":\"{{$randomFirstName}}\",\r\n    \"last_name\":\"{{$randomLastName}}\",\r\n    \"email\":\"{{$randomEmail}}\",\r\n    \"password\":\"{{$randomPassword}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/register",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.26"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Dec 2024 09:11:43 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmM4MjRjODYwMzQxM2Y5MjJhNGNjNDZlZTJiZDBiNWU0OTc1ZTY4NGMxNWQ5MDE2MWRmNTNlMjAwYWU1NTFiYTI3YjkyZTVhNzFhOGIyMDIiLCJpYXQiOjE3MzM3MzU1MDMuMTg0NDQ3LCJuYmYiOjE3MzM3MzU1MDMuMTg0NDUsImV4cCI6MTc0OTQ2MDMwMi42NjI1MzgsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.Pb8W14X98qtzLCvGDqdbIRs7vSiQIxlVjVqeHxtDPvkG1iScjp8OLrBVVrjROhVwOqaOtbYBrjxD-A2F8MFRSp3ssPM4ceXfoY1CV05EmzAfa2uWJQzpLH_PJ1MGyumrgzPCSK4T0EaErAMn7X-r2QvmgTRHFE0XDMR9pk0hFc93wQY70BzHVH0m6YmmrAvZZBkpx7g5-DscASWkLeWXEErDG3H0isgrLJc-Kp75sG2NVuzRLaxJWi7vHV6XJHSPAStEQUDrPFKO6_VuRzv7keV8y91zPJ8yxBdGEC6Ro3trcJWmtDMTK2QdGWwp96qBYElhJXk8-9t4R7JWYZPV-XwND18jSt8_jpvcYku__grWPYHupl3doq8wrzYU1_dr-xWmNzYYRUuRnUVKx8B2pI4eEXYDAFJg70AS1OL8FGdjhkJIyJ7hOHPlFcdDygjjLoNNbn6YUGBDrfAQCwROL7masXqwMAAkdmiDnGZqGrh-rdi0f6phRxoaltnFfEF_-XVxNNWddnPUTvZel_LkdsZHpb1tKplQ5HXeOIKFDKJSKv18LPSzoc_BK4RIAlmjw5zVF-5X3jcBDudPy0CTj2z0dhUJrrox281hj95fOJRGxa2xsViPISAs60k9zwAQMullJEXQeg9cVp6he0p6b0p42wY0bg7n7-zRHjxuURU\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"mutuku@email.com\",\r\n    \"password\":\"MutukusVerySecurePassword1234,\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/login",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"mutuku@email.com\",\r\n    \"password\":\"MutukusVerySecurePassword1234,\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/login",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.26"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Dec 2024 09:16:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYWYxOTg5NWE5MWZkZGExYWQzYzdhYTNlNjM2ZTk1NjBjZTY0MDY1YTE0NmY3MTFmOGQxOWFjYjQzNWE5M2I0YWYwOGQzYWY3ZDFkYWU5YmQiLCJpYXQiOjE3MzM3MzU4MTcuNzAyNTk0LCJuYmYiOjE3MzM3MzU4MTcuNzAyNTk4LCJleHAiOjE3NDk0NjA2MTcuNjk1ODIxLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.JXCdLK5wpXtV5LyjzfKXs03CWWIW6DU1LcFEF1Q6zkC6-OStGtg0KeFdBA8qfON19QiHDuR2TRpogfnBmXyzCP182P-4vvUQVT9QTITxNlm_j_9Ejzx2mWruPy7Ch0tcgl_BKjC_HMU9Ku68TkLaYw8KXnlMRJglyNgjkeCPkhKCcrKyZaJD4Tk0Q4fHHzRJ_ZSNqcqhpMSKCdSwc-HbLRHjUyCdoTozdTvkr7zZTicm5fgFCM62ceYQ3gpvzRhV1Lk1M3dkaL0ymbcLTolAlIX_K1r5fk6sk3eaX9duAHH4Egw0NJpc9pRnEeGIVNrriwJM1Cm7lGq5Azq2P0U01OdOP9jVV9RGf7IPvlKpkzxA7_bcZmOrzzt3XRD2CtOHdf2ZsidqdpG39fTEuMOhOJpsDuiYn0ZdZNbd5wtgFa9tbq1QhngrU0tcHdIN2ZLgq8kiRNfXQ_qT12FaCthLVYJQ-P-TPMH2nCe_AViPcNFRSvKXMNzrE8kHBuqL-y-AY-Heq4kXBscvFo51C4TLce3XFbQ9f5pplOOgdNNC9feD4nqfGx3_NpkZxNjA0fdCfyWK4wh38R_5LcwaWam8OrjpEVuy_smqcotcjhuLPb8VIraik-ojZKaSWchJx3GXbzonE5BiYUt7qhJ_JJD-DRBYEVCe5IYMnMB9UUnKr7Y\",\n    \"user\": {\n        \"id\": 3,\n        \"first_name\": \"Abdul\",\n        \"last_name\": \"Fay\",\n        \"email\": \"mutuku@email.com\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2024-12-09T09:15:52.000000Z\",\n        \"updated_at\": \"2024-12-09T09:15:52.000000Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Property",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"{{$randomStreetName}}\",\r\n    \"gpslocation\":\"{{$randomLatitude}}, {{$randomLongitude}}\",\r\n    \"description\":\"{{$randomCatchPhraseDescriptor}}\",\r\n    \"cost\":{{$randomPrice}},\r\n    \"location\":\"{{$randomCity}}\",\r\n    \"amenities\":\"Random ammenities\",\r\n    \"image\":\"{{$randomImageUrl}}\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/properties/add",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"properties",
+						"add"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Property",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"{{$randomStreetName}}\",\r\n    \"gpslocation\": \"{{$randomLatitude}}, {{$randomLongitude}}\",\r\n    \"description\": \"{{$randomCatchPhraseDescriptor}}\",\r\n    \"cost\": {{$randomPrice}},\r\n    \"location\": \"{{$randomCity}}\",\r\n    \"amenities\": \"Random ammenities\",\r\n    \"image\": \"{{$randomImageUrl}}\",\r\n    \"extra_images\": [\r\n        \"{{$randomImageUrl}}\",\r\n        \"{{$randomImageUrl}}\",\r\n        \"{{$randomImageUrl}}\",\r\n        \"{{$randomImageUrl}}\",\r\n        \"{{$randomImageUrl}}\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/properties/add",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"properties",
+								"add"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.26"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Dec 2024 09:39:42 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Gutkowski Lights\",\n    \"gpslocation\": \"-30.2832, -91.1254\",\n    \"description\": \"24 hour\",\n    \"amenities\": \"Random ammenities\",\n    \"cost\": 126.64,\n    \"location\": \"Denton\",\n    \"owner_id\": 3,\n    \"updated_at\": \"2024-12-09T09:39:42.000000Z\",\n    \"created_at\": \"2024-12-09T09:39:42.000000Z\",\n    \"id\": 2,\n    \"images\": [\n        {\n            \"id\": 1,\n            \"property_id\": 2,\n            \"image\": \"http://placeimg.com/640/480\",\n            \"created_at\": \"2024-12-09T09:39:42.000000Z\",\n            \"updated_at\": \"2024-12-09T09:39:42.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"property_id\": 2,\n            \"image\": \"http://placeimg.com/640/480\",\n            \"created_at\": \"2024-12-09T09:39:42.000000Z\",\n            \"updated_at\": \"2024-12-09T09:39:42.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"property_id\": 2,\n            \"image\": \"http://placeimg.com/640/480\",\n            \"created_at\": \"2024-12-09T09:39:42.000000Z\",\n            \"updated_at\": \"2024-12-09T09:39:42.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"property_id\": 2,\n            \"image\": \"http://placeimg.com/640/480\",\n            \"created_at\": \"2024-12-09T09:39:42.000000Z\",\n            \"updated_at\": \"2024-12-09T09:39:42.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"property_id\": 2,\n            \"image\": \"http://placeimg.com/640/480\",\n            \"created_at\": \"2024-12-09T09:39:42.000000Z\",\n            \"updated_at\": \"2024-12-09T09:39:42.000000Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "All Properties",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/properties/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"properties",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "All Properties",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8000/api/properties/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"properties",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.26"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Dec 2024 09:41:37 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Oswald Garden\",\n        \"owner_id\": 3,\n        \"gpslocation\": \"-69.4877, -27.1520\",\n        \"description\": \"multi-state\",\n        \"amenities\": \"Random ammenities\",\n        \"image\": null,\n        \"cost\": \"691.94\",\n        \"location\": \"Naperville\",\n        \"active\": 1,\n        \"created_at\": \"2024-12-09T09:37:48.000000Z\",\n        \"updated_at\": \"2024-12-09T09:37:48.000000Z\",\n        \"images\": [],\n        \"owner\": {\n            \"id\": 3,\n            \"first_name\": \"Abdul\",\n            \"last_name\": \"Fay\",\n            \"email\": \"mutuku@email.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2024-12-09T09:15:52.000000Z\",\n            \"updated_at\": \"2024-12-09T09:15:52.000000Z\"\n        }\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Gutkowski Lights\",\n        \"owner_id\": 3,\n        \"gpslocation\": \"-30.2832, -91.1254\",\n        \"description\": \"24 hour\",\n        \"amenities\": \"Random ammenities\",\n        \"image\": null,\n        \"cost\": \"126.64\",\n        \"location\": \"Denton\",\n        \"active\": 1,\n        \"created_at\": \"2024-12-09T09:39:42.000000Z\",\n        \"updated_at\": \"2024-12-09T09:39:42.000000Z\",\n        \"images\": [\n            {\n                \"id\": 1,\n                \"property_id\": 2,\n                \"image\": \"http://placeimg.com/640/480\",\n                \"created_at\": \"2024-12-09T09:39:42.000000Z\",\n                \"updated_at\": \"2024-12-09T09:39:42.000000Z\"\n            },\n            {\n                \"id\": 2,\n                \"property_id\": 2,\n                \"image\": \"http://placeimg.com/640/480\",\n                \"created_at\": \"2024-12-09T09:39:42.000000Z\",\n                \"updated_at\": \"2024-12-09T09:39:42.000000Z\"\n            },\n            {\n                \"id\": 3,\n                \"property_id\": 2,\n                \"image\": \"http://placeimg.com/640/480\",\n                \"created_at\": \"2024-12-09T09:39:42.000000Z\",\n                \"updated_at\": \"2024-12-09T09:39:42.000000Z\"\n            },\n            {\n                \"id\": 4,\n                \"property_id\": 2,\n                \"image\": \"http://placeimg.com/640/480\",\n                \"created_at\": \"2024-12-09T09:39:42.000000Z\",\n                \"updated_at\": \"2024-12-09T09:39:42.000000Z\"\n            },\n            {\n                \"id\": 5,\n                \"property_id\": 2,\n                \"image\": \"http://placeimg.com/640/480\",\n                \"created_at\": \"2024-12-09T09:39:42.000000Z\",\n                \"updated_at\": \"2024-12-09T09:39:42.000000Z\"\n            }\n        ],\n        \"owner\": {\n            \"id\": 3,\n            \"first_name\": \"Abdul\",\n            \"last_name\": \"Fay\",\n            \"email\": \"mutuku@email.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2024-12-09T09:15:52.000000Z\",\n            \"updated_at\": \"2024-12-09T09:15:52.000000Z\"\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/properties/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"properties",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8000/api/properties/1",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"properties",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.26"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Dec 2024 09:42:26 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"Oswald Garden\",\n    \"owner_id\": 3,\n    \"gpslocation\": \"-69.4877, -27.1520\",\n    \"description\": \"multi-state\",\n    \"amenities\": \"Random ammenities\",\n    \"image\": null,\n    \"cost\": \"691.94\",\n    \"location\": \"Naperville\",\n    \"active\": 1,\n    \"created_at\": \"2024-12-09T09:37:48.000000Z\",\n    \"updated_at\": \"2024-12-09T09:37:48.000000Z\",\n    \"images\": [],\n    \"owner\": {\n        \"id\": 3,\n        \"first_name\": \"Abdul\",\n        \"last_name\": \"Fay\",\n        \"email\": \"mutuku@email.com\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2024-12-09T09:15:52.000000Z\",\n        \"updated_at\": \"2024-12-09T09:15:52.000000Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Edit Property",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/properties/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"properties",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Property",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/properties/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"properties",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZGY4YTg0NDFhNjVkM2FkMDQzNWNmNWMwNmVkZmFkNzUwN2M3OWRmYzEyYjM1ZTI0NGQzMmJhNjZhMDRjY2UzYmUwZmRmNzdlOTFhNGUzZTMiLCJpYXQiOjE3MzM3MzYxNTcuMDUzNDMxLCJuYmYiOjE3MzM3MzYxNTcuMDUzNDM1LCJleHAiOjE3NDk0NjA5NTcuMDQ3MDQsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.eGrzaokr3UjMTNlX7NDi2426vR60bDjFkrFqoyY0hieiMh4Dk7y2Be91-Pn7Z0TR0C3CDotksQ44Twb4VyDAyzGrRemAYEkuB8WWkjhQW7rrn05m1l3WaXGgcRyeWxnuaprhhZo_zMGseTjftRfvWnAJtEJaJHPpb_AMr3wayWnKSb9srNBUL7LYQFI6apovCBOra2Kqdt8h60X0aAUOR6aelZv8olGe4bRmbtJoTAEZwKcgNla5D64yXP4a3k_LHzivNaDLHqN6-nm7orN_CNyGOEs_oJogjVtCQXas3QVL528o1oioOoC2cB2FXfUJr78rGPkVaBuD1Wj6kTYBNMzPLe17VvAKjSRPovznaHuK_e3iWaCC9v--WohVdFi5FEO3Mz8t88y_6u78b9NWRP7PBX6zWlymEnUXNPLTmjLC5tXj5MxjldbspIi5zbSvJDtdSqRwAYWj1CJ9OS5Hc4y7aSqpRc6GEh4XBsmYP7jL8SBk-KMx8ziIE9V_-Q6i9BCzGpTPqzswSXio1SjCEF319BSgNkjQGpCC2vBE4b8gImzvzDaW0tNOCd2LpT4-OLESynQQBwD9WQUcnUz5uIiV-ubEFRTEbRCHbwY5cP8-pdx6szd97l-vafNxZykvqWLE46O4IPOR-Ivs-dksO7IMlcR4njJZnRyl3I3pzxk",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
